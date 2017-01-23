@@ -1,0 +1,131 @@
+body{
+  margin:0;
+  padding: 0;
+  background-color: #4682b4;
+}
+
+#playerEnclosure{
+  width: 800px;
+  margin: 100px auto;
+}
+
+#player{
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+#player:hover > .controls{
+transform: translateY(0);
+}
+
+.video_player{
+  width: 100%;
+  display: block;
+}
+
+.controls{
+  position: absolute;
+  bottom: 0;
+  height: 35px;
+  width: 100%;
+  margin: 0;
+  background: -moz-linear-gradient(top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(0,0,0,0.8) 0%,rgba(0,0,0,0.4) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(0,0,0,0.8) 0%,rgba(0,0,0,0.4) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#33000000',GradientType=0 ); /* IE6-9 */
+  transition-duration: 0.8s;
+  transform: translateY(100%) translateY(-5px);
+}
+
+.progress_bar{
+  top:0;
+  width: 100%;
+  height: 5px;
+  background-color: black;
+}
+
+.current_progress{
+  width: 0%;
+  height: 5px;
+  background-color: #8f0222;
+  z-index: -1;
+
+}
+
+.player_button{
+  background-color: rgba(0,0,0,0);
+  color:#AAAAAA;
+  border: none;
+  margin-top:4.5px;
+  position: absolute;
+}
+
+.player_button:hover{
+  color:#FFFFFF;
+
+}
+
+.player_button:focus {
+  outline: none;
+}
+
+.togglePlay{
+  left:0;
+}
+
+.dataskipbk{
+  right:50px;
+}
+
+.dataskipfwd{
+  right:0px;
+}
+
+.fullscreen{
+  right:100px;
+}
+input[type=range] {
+  position: absolute;
+  top:15px;
+  left:30px;
+  -webkit-appearance: none;
+  background:transparent;
+  width: 100px;
+}
+
+input[type=range]:focus {
+  outline: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 3px;
+  cursor: pointer;
+  background: #AAAAAA;
+}
+input[type=range]::-webkit-slider-thumb {
+  height: 10px;
+  width: 10px;
+  border-radius: 100%;
+  background: #FFFFFF;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -3.5px;
+}
+
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 3px;
+  cursor: pointer;
+  background: #AAAAAA;
+}
+input[type=range]::-moz-range-thumb {
+  height: 10px;
+  width: 10px;
+  border-radius: 100%;
+  background: #FFFFFF;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -3.5px;
+}
