@@ -17,9 +17,9 @@ function togglePlay(){  //Toggles whether video is playing
 
 function updateButton(){  //Toggles button according to whether video is playing
   if(video.paused){
-    playButton.textContent = '❚ ❚';
-  }else{
     playButton.textContent = '►';
+  }else{
+    playButton.textContent = '❚ ❚';
   }
 }
 
@@ -95,3 +95,4 @@ let mousedown = false;
 progressBar.addEventListener('mousemove',(e) => mousedown && scrub(e));
 progressBar.addEventListener('mousedown', ()=>mousedown = true);
 progressBar.addEventListener('mouseup', ()=>mousedown = false);
+progressBar.addEventListener('click',scrub);
