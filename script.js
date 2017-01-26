@@ -93,6 +93,6 @@ fullscreenButton.addEventListener('click',toggleFullscreen);
 
 let mousedown = false;
 progressBar.addEventListener('mousemove',(e) => mousedown && scrub(e));
-progressBar.addEventListener('mousedown', ()=>mousedown = true);
-progressBar.addEventListener('mouseup', ()=>mousedown = false);
+document.body.addEventListener('mousedown', ()=>mousedown = true);
+document.body.addEventListener('mouseup', ()=>mousedown = false);
 progressBar.addEventListener('click',scrub);
